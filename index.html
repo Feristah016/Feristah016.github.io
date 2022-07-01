@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 {
+        font-size: 300px
+        }
+
+        .hh {
+        font-size: 100px
+        color:white
+        size: 100px
+        }
+
+        .divv {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            }
+    </style>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <meta charset="UTF-8">
+    <title>sa</title>
+     <py-env>
+         - numpy
+         - matplotlib
+     </py-env>
+
+
+</head>
+<body style="background-color:red">
+    <py-script>
+        import random
+        print(random.randint(0, 100))
+    </py-script>
+    <div id="plot" class="divv" href="https://www.youtube.com/watch?v=vu9Bl4ZMOd0"></div>
+        <py-script output="plot">
+            import matplotlib.pyplot as plt
+            import numpy as np
+            from matplotlib import style
+
+            style.use("ggplot")
+            x = np.linspace(0, 10)
+            y = x**2 -x*5 -2
+            plt.plot(x, y, "c")
+            plt
+        </py-script>
+
+</body>
+</html>
