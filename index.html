@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
     <style>
+        .bot {
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -50%);
+        }
         h1 {
-        font-size: 300px
+            font-size: 100px;
+            color: black;
         }
 
         .hh {
-        font-size: 100px
-        color:white
-        size: 100px
+            font-size: 100px;
+            color:black;
+            size: 100px;
         }
 
         .divv {
@@ -35,6 +42,7 @@
         import random
         print(random.randint(0, 100))
     </py-script>
+    <a href="https://www.youtube.com/watch?v=vu9Bl4ZMOd0" class="bot"><h1>Ğ</h1></a>
     <div id="plot" class="divv" href="https://www.youtube.com/watch?v=vu9Bl4ZMOd0"></div>
         <py-script output="plot">
             import matplotlib.pyplot as plt
@@ -42,9 +50,15 @@
             from matplotlib import style
 
             style.use("ggplot")
-            x = np.linspace(0, 10)
-            y = x**2 -x*5 -2
-            plt.plot(x, y, "c")
+            x = []
+            y = []
+            
+            for i in range(1000):
+                x.append(random.randint(-100, 100))
+                y.append(random.randint(-100, 100))
+            
+            
+            plt.scatter(x, y)
             plt
         </py-script>
 
